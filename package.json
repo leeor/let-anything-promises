@@ -1,0 +1,21 @@
+{
+  "name": "ppx-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Leeor Aharon",
+  "license": "MIT",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@aantron/repromise": "0.6.0",
+    "bs-platform": "5.0.3"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "0.4.8",
+    "let-anything": "1.0.3"
+  }
+}
