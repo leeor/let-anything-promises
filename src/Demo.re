@@ -1,19 +1,19 @@
-module RepromiseMap = {
-  let let_ = (promise, fn) => Repromise.map(fn, promise);
+module PromiseMap = {
+  let let_ = (promise, fn) => Promise.map(fn, promise);
 };
 
-module RepromiseBind = {
-  let let_ = (promise, fn) => promise |> Repromise.andThen(fn);
+module PromiseBind = {
+  let let_ = (promise, fn) => promise |> Promise.map(fn);
 };
 
-module RepromiseJsMap = {
+module PromiseJsMap = {
   let let_ = (promise, fn) =>
-    promise |> Repromise.map(fn) |> Repromise.Rejectable.toJsPromise;
+    promise |> Promise.map(fn) |> Promise.Js.toBsPromise;
 };
 
-module RepromiseJsBind = {
+module PromiseJsBind = {
   let let_ = (promise, fn) =>
-    promise |> Repromise.andThen(fn) |> Repromise.Rejectable.toJsPromise;
+    promise |> Promise.map(fn) |> Promise.Js.toBsPromise;
 };
 
 module JsPromiseMap = {

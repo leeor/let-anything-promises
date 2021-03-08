@@ -16,8 +16,8 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bs-dependencies": ["@glennsl/bs-jest", "@aantron/repromise"],
-  "ppx-flags": ["let-anything/ppx"],
+  "bs-dependencies": ["@glennsl/bs-jest", "reason-promise"],
+  "ppx-flags": ["bs-let/ppx"],
   "warnings": {
     "error": "+101"
   },
